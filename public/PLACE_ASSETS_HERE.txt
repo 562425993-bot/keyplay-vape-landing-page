@@ -7,7 +7,8 @@ public/
     01-diy-cartridge.jpg
     product-360/          （360 帧 PNG，如 0_0.png …）
     dual-mesh-frames/
-    clack-joy-frames/
+    clack-joy-frames/          （卡片 hover 01–40.jpg）
+    clack-joy-section-frames/  （大区块背景 01–16.jpg，可与 npm run build 前脚本从 05咔哒/动画帧 同步）
     vape-pet-icons/
     …（其余见 src/App.tsx 中 withBase 引用）
   videos/

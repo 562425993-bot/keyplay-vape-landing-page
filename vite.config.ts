@@ -179,8 +179,10 @@ function devRootRedirectToBasePlugin(): {
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
+  /** 本地开发仍用 /keyplay/；Vercel 等生产环境挂在域名根路径，必须用 / 否则资源 404 白屏 */
+  const base = mode === 'production' ? '/' : '/keyplay/';
   return {
-    base: '/keyplay/',
+    base,
     plugins: [
       devRootRedirectToBasePlugin(),
       react(),

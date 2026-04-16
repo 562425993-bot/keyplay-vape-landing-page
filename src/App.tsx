@@ -143,7 +143,7 @@ const DUAL_MESH_SECTION_FRAME_COUNT = 19;
 const DUAL_MESH_SECTION_FRAME_INTERVAL_MS = 90;
 const dualMeshSectionFrameSrc = (index: number) =>
   withBase(`images/dual-mesh-section-frames/frame-${String((index % DUAL_MESH_SECTION_FRAME_COUNT) + 1).padStart(2, '0')}.jpg`);
-/** 仅 CLACK JOY 大区块：开发时 Vite 映射 replacement-images/详情切图 - 副本/05咔哒/动画帧；生产用 images/clack-joy-frames */
+/** 大区块背景序列：开发时 Vite 映射 replacement-images/…/05咔哒/动画帧；生产用 images/clack-joy-section-frames（勿与下方卡片 hover 的 clack-joy-frames 混用） */
 const USE_LOCAL_CLACK_JOY_SECTION_FRAMES = import.meta.env.DEV;
 const CLACK_JOY_SECTION_FRAME_COUNT = 16;
 /** 正序时长（越小越快） - 正序再慢一点 */
@@ -162,7 +162,7 @@ const clackJoySectionFrameSrc = (index: number) => {
   if (USE_LOCAL_CLACK_JOY_SECTION_FRAMES) {
     return `${import.meta.env.BASE_URL}local-clack-joy-frames/${pad}.jpg`;
   }
-  return withBase(`images/clack-joy-frames/${pad}.jpg`);
+  return withBase(`images/clack-joy-section-frames/${pad}.jpg`);
 };
 const clackJoyCardFrameSrc = (index: number) => {
   const n = (index % CLACK_JOY_CARD_FRAME_COUNT) + 1;
