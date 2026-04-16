@@ -1,0 +1,40 @@
+@import "tailwindcss" source(none);
+@source "../index.html";
+@source "./App.tsx";
+@source "./main.tsx";
+@source "./Product360Viewer.tsx";
+@source "./ScrollReveal.tsx";
+
+@layer base {
+  @font-face {
+    font-family: 'HarmonyOS Sans SC';
+    src: local('HarmonyOS Sans SC'), local('Microsoft YaHei'), sans-serif;
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'HarmonyOS Sans SC Black';
+    src: local('HarmonyOS Sans SC Black'), local('Microsoft YaHei Bold'), sans-serif;
+    font-weight: 900;
+  }
+}
+
+@utility font-harmony {
+  font-family: 'HarmonyOS Sans SC', 'Microsoft YaHei', sans-serif;
+}
+
+@utility font-harmony-black {
+  font-family: 'HarmonyOS Sans SC Black', 'Microsoft YaHei', sans-serif;
+}
+
+/* POWER 1100mAh: hover crossfade top layer only */
+@keyframes power-1100-fade-out-top {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.power-1100-fade-out-once {
+  animation: power-1100-fade-out-top 1.8s linear forwards;
+}
